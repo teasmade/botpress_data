@@ -3,7 +3,9 @@
     "id": "default",
     "name": "Default",
     "audience": "external",
-    "bots": [],
+    "bots": [
+      "tobi-dsi"
+    ],
     "roles": [
       {
         "id": "admin",
@@ -94,6 +96,49 @@
           },
           {
             "res": "admin.bots.archive",
+            "op": "-r"
+          }
+        ]
+      },
+      {
+        "id": "agent",
+        "name": "admin.workspace.roles.default.agent.name",
+        "description": "admin.workspace.roles.default.agent.description",
+        "rules": [
+          {
+            "res": "*",
+            "op": "+r"
+          },
+          {
+            "res": "module.hitlnext",
+            "op": "+r+w"
+          },
+          {
+            "res": "admin.collaborators.*",
+            "op": "-r"
+          },
+          {
+            "res": "admin.logs.*",
+            "op": "-r"
+          },
+          {
+            "res": "admin.roles.*",
+            "op": "-r"
+          },
+          {
+            "res": "admin.bots.archive",
+            "op": "-r"
+          },
+          {
+            "res": "bot.flows",
+            "op": "-r"
+          },
+          {
+            "res": "bot.content",
+            "op": "-r"
+          },
+          {
+            "res": "studio.*",
             "op": "-r"
           }
         ]
