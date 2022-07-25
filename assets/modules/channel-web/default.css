@@ -331,6 +331,7 @@ body {
 .bpw-chat-bubble-content {
   border: 1px solid #f1f1f1;
   padding: 0.5rem 0.75rem;
+  border-radius: 20px;
 }
 
 .bpw-message-feedback {
@@ -513,7 +514,8 @@ body {
 
 /* Comment this element to hide the icon indicating an external website */
 .bpw-card-external-icon {
-  background: url(/assets/modules/channel-web/images/external_icon.png) no-repeat;
+  background: url(/assets/modules/channel-web/images/external_icon.png)
+    no-repeat;
   width: 16px;
   height: 16px;
   display: inline-block;
