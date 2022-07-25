@@ -1,0 +1,18 @@
+{
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground": "#00ff00",
+    "editorIndentGuide.background": "#ff9999",
+    "editorError.foreground": "#ff00ff",
+    "editorError.border": "#ff00ff",
+    "sideBar.background": "#000E19",
+    "editorGutter.foldingControlForeground": "#ff00ff",
+    "editor.foldBackground": "#022E52",
+    "minimap.selectionOccurrenceHighlight": "#ff0000",
+    "minimap.selectionHighlight": "#bbff00",
+    "minimap.findMatchHighlight": "#ff0000",
+    "minimap.warningHighlight": "#ff0000",
+    "activityBar.background": "#472509",
+    "titleBar.activeBackground": "#64330D",
+    "titleBar.activeForeground": "#FEF9F5"
+  }
+}
