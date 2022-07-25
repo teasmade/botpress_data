@@ -1,0 +1,21 @@
+{
+  "name": "information",
+  "utterances": {
+    "fr": [
+      "Je ne sais pas comment régler mes actions de mise en conformité",
+      "Comment puis-je connecter à la VPN ?",
+      "Comment faire pour déposer une demande de matériel?",
+      "J'ai besoin d'information",
+      "Je ne sais pas comment faire quelque chose",
+      "Je recherche des information sur l'utilisation de la VPN",
+      "Comment savoir utiliser la VPN ?",
+      "On fait comment pour demander de nouveau matériel ?",
+      "Ou sont les information sur l'installation des logiciels ?",
+      "Comme accéder à la wiki ?"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

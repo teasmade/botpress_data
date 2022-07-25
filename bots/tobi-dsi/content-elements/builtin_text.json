@@ -1,0 +1,112 @@
+[
+  {
+    "id": "builtin_text-z4C2hI",
+    "formData": {
+      "text$fr": "Je suis là pour vous aider à trouver les informations dont vous avez besoin, et à naviguer les services qui vous sont proposés par la DSI.\n",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T13:01:47.491Z",
+    "modifiedOn": "2022-07-21T10:41:27.015Z"
+  },
+  {
+    "id": "builtin_text-Xpq3HE",
+    "formData": {
+      "text$fr": "Dites-moi comment je peux vous aider.",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T13:04:22.029Z",
+    "modifiedOn": "2022-07-21T12:37:24.380Z"
+  },
+  {
+    "id": "builtin_text-_XaDvz",
+    "formData": {
+      "text$fr": "Désolé d'entendre que vous avez un problème.",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T13:15:08.257Z",
+    "modifiedOn": "2022-07-20T13:15:08.257Z"
+  },
+  {
+    "id": "builtin_text-IXJEx4",
+    "formData": {
+      "text$fr": "Je vais (un jour) vous aider à retrouver cette information",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-20T13:15:47.480Z",
+    "modifiedOn": "2022-07-20T13:15:47.480Z"
+  },
+  {
+    "id": "builtin_text-OJyYh4",
+    "formData": {
+      "text$fr": "Bonjour {{user.token}}",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-21T12:33:11.430Z",
+    "modifiedOn": "2022-07-21T14:06:53.132Z"
+  },
+  {
+    "id": "builtin_text-czP0LV",
+    "formData": {
+      "text$fr": "Vos difficultés sont par rapport à quoi ?",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-21T13:22:47.533Z",
+    "modifiedOn": "2022-07-21T13:22:47.533Z"
+  },
+  {
+    "id": "builtin_text-WCShzD",
+    "formData": {
+      "text$fr": "Bonjour {{user.firstName}}",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-21T14:09:34.787Z",
+    "modifiedOn": "2022-07-22T08:00:49.501Z"
+  },
+  {
+    "id": "builtin_text-ei80mj",
+    "formData": {
+      "text$fr": "(Je peux aussi appeler l'API LiveIT pour trouver des informations qui vous concernent. \n\nPar exemple, au niveau de vos actions de conformité : *{{user.conformity.status_text}} *)",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-21T14:43:31.396Z",
+    "modifiedOn": "2022-07-22T14:51:04.343Z"
+  },
+  {
+    "id": "builtin_text-5wuzPK",
+    "formData": {
+      "text$fr": "Je n'ai pas tout à fait compris ; essayez encore une fois svp.",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-22T13:19:04.461Z",
+    "modifiedOn": "2022-07-22T13:19:04.461Z"
+  },
+  {
+    "id": "builtin_text-jjlQ2p",
+    "formData": {
+      "text$fr": "Slot {{session.slots.help_topic.name}} \n\nfilled with {{seesions.slots.help_topic.value}} \n\n(Entity value {{session.slots.help_topic.entity.meta.source}} )",
+      "markdown$fr": true,
+      "typing$fr": true
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-22T13:21:47.795Z",
+    "modifiedOn": "2022-07-22T13:47:30.623Z"
+  }
+]

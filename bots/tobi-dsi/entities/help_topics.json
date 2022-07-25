@@ -1,0 +1,48 @@
+{
+  "id": "help_topics",
+  "name": "help_topics",
+  "type": "list",
+  "occurrences": [
+    {
+      "name": "matériel",
+      "synonyms": [
+        "laptop",
+        "pc",
+        "mobile",
+        "portable",
+        "téléphone",
+        "dell",
+        "android",
+        "iphone"
+      ]
+    },
+    {
+      "name": "logiciels",
+      "synonyms": [
+        "office",
+        "word",
+        "excel",
+        "powerpoint",
+        "outlook"
+      ]
+    },
+    {
+      "name": "accès",
+      "synonyms": [
+        "login",
+        "password",
+        "mot de passe",
+        "connexion",
+        "crédentiels"
+      ]
+    },
+    {
+      "name": "établissement",
+      "synonyms": []
+    }
+  ],
+  "sensitive": false,
+  "fuzzy": 0.8,
+  "examples": [],
+  "pattern": ""
+}

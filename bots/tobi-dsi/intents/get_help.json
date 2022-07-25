@@ -1,0 +1,31 @@
+{
+  "name": "get_help",
+  "utterances": {
+    "fr": [
+      "J'ai un problème",
+      "Je ne peux pas me connecter à un logiciel",
+      "Il y a un défaut avec mon matériel",
+      "Il semble que la VPN ne marche pas ajd'hui",
+      "Je n'arrive pas à me logguer",
+      "Il y un défaut sur mon pc",
+      "J'ai des problèmes suite au MAJ windows",
+      "Mon pc ne s'allume pas",
+      "La VPN semble être en panne",
+      "Je n'ai pas les détails pour me connecter sur Workplace"
+    ]
+  },
+  "slots": [
+    {
+      "id": "cYd4ZF1Nu2wAJrRMtx0LL",
+      "name": "help_topic",
+      "entities": [
+        "help_topics"
+      ],
+      "color": 1
+    }
+  ],
+  "contexts": [
+    "global",
+    "problem"
+  ]
+}

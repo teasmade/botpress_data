@@ -1,0 +1,49 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "help_topic",
+  "description": "",
+  "nodes": [
+    {
+      "id": "skill-abb703",
+      "type": "skill-call",
+      "skill": "Slot",
+      "name": "help_topic",
+      "flow": "skills/Slot-abb703.flow.json",
+      "next": [
+        {
+          "caption": "On extracted",
+          "condition": "temp.extracted == \"true\"",
+          "node": "slot_filled"
+        },
+        {
+          "caption": "On not found",
+          "condition": "temp.notExtracted == \"true\"",
+          "node": ""
+        },
+        {
+          "caption": "On already extracted",
+          "condition": "temp.alreadyExtracted == \"true\"",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "900af33854",
+      "name": "slot_filled",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-jjlQ2p"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

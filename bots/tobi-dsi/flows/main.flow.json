@@ -1,0 +1,86 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "init_webchat_data",
+  "nodes": [
+    {
+      "id": "2d3dc79704",
+      "name": "get_help",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "help_flow.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-_XaDvz",
+        "builtin/wait {\"delay\":\"1000\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "82636e3e18",
+      "name": "information",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-IXJEx4"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "544727e1ed",
+      "name": "init_webchat_data",
+      "next": [
+        {
+          "condition": "true",
+          "node": "entry_intro"
+        }
+      ],
+      "onEnter": [
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
+        "liveit_api {\"url\":\"http://liveit.api/user/conformity-status\",\"key\":\"conformity\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "entry",
+      "name": "entry_intro",
+      "next": [
+        {
+          "condition": "event.nlu.intent.name === 'information'",
+          "conditionType": "intent",
+          "node": "information"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'get_help'",
+          "conditionType": "intent",
+          "node": "get_help"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-WCShzD",
+        "builtin/wait {\"delay\":\"1000\"}",
+        "say #!builtin_text-z4C2hI",
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-ei80mj",
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-Xpq3HE"
+      ],
+      "onReceive": []
+    }
+  ]
+}

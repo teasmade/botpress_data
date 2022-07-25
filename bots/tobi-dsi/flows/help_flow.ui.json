@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "skill-abb703",
+      "position": {
+        "x": -65,
+        "y": 85
+      }
+    },
+    {
+      "id": "900af33854",
+      "position": {
+        "x": 210,
+        "y": -20
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "skill-abb703",
+      "sourcePort": "out0",
+      "target": "900af33854",
+      "points": [
+        {
+          "x": 135,
+          "y": 129
+        },
+        {
+          "x": 211,
+          "y": -2
+        }
+      ]
+    }
+  ]
+}
