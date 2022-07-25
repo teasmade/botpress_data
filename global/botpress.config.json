@@ -2,6 +2,7 @@
   "$schema": "../botpress.config.schema.json",
   "httpServer": {
     "host": "localhost",
+    "restart": "go",
     "port": 3000,
     "backlog": 0,
     "bodyLimit": "10mb",
@@ -13,10 +14,7 @@
       "enabled": false,
       "maxAge": "1h"
     },
-    "socketTransports": [
-      "websocket",
-      "polling"
-    ],
+    "socketTransports": ["websocket", "polling"],
     "rateLimit": {
       "enabled": false,
       "limitWindow": "30s",
@@ -113,9 +111,7 @@
     }
   ],
   "pro": {
-    "collaboratorsAuthStrategies": [
-      "default"
-    ],
+    "collaboratorsAuthStrategies": ["default"],
     "enabled": false,
     "licenseKey": "paste your license key here",
     "monitoring": {
@@ -133,9 +129,7 @@
     },
     "externalAuth": {
       "enabled": false,
-      "algorithms": [
-        "HS256"
-      ],
+      "algorithms": ["HS256"],
       "publicKey": "insert key here",
       "jwksClient": {}
     },
@@ -186,10 +180,7 @@
     "enabled": true,
     "collectionInterval": "1s",
     "retentionPeriod": "30d",
-    "ignoredEventTypes": [
-      "visit",
-      "typing"
-    ],
+    "ignoredEventTypes": ["visit", "typing"],
     "ignoredEventProperties": [],
     "debuggerProperties": [
       "ndu.triggers",
@@ -228,5 +219,5 @@
     "entriesLimit": 1000
   },
   "version": "12.27.0",
-  "appSecret": "LfD7OnfdXf6OffyvNI-9rVGjvqFJqaBJUnOrgM1S"
+  "appSecret": "W3pz9Nwxgv0Uads0B5sz5Lz8CuaiSQ0TqUiU1dgB"
 }
