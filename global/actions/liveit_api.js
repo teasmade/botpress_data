@@ -8,6 +8,8 @@ const axios = require("axios");
  * @param key - the key to save the response in under user.
  */
 const action = async (url, key) => {
+  // bp.logger.info(`ACTION-API-SESSION: ${JSON.stringify(session)}`);
+  // bp.logger.info(`ACTION-API-USER: ${JSON.stringify(user)}`);
   const config = {
     method: "get",
     url: url,
@@ -19,7 +21,8 @@ const action = async (url, key) => {
   };
   try {
     let response = await axios(config);
-    user[key] = response.data.payload[0];
+    // TODO edit this to not just be the first item
+    user[key] = response.data.payload[8];
   } catch (error) {
     bp.logger.error(error);
     const errorCode =
