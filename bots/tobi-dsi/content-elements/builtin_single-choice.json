@@ -1,0 +1,25 @@
+[
+  {
+    "id": "builtin_single-choice-_7Cp4F",
+    "formData": {
+      "dropdownPlaceholder$fr": "Select...",
+      "choices$fr": [
+        {
+          "title": "Oui",
+          "value": "yes"
+        },
+        {
+          "title": "Non",
+          "value": "no"
+        }
+      ],
+      "markdown$fr": true,
+      "disableFreeText$fr": false,
+      "typing$fr": true,
+      "text$fr": "Est-ce que vous rencontrez des difficultés avec les démarches de mise en conformité ?"
+    },
+    "createdBy": "admin",
+    "createdOn": "2022-07-28T10:24:47.347Z",
+    "modifiedOn": "2022-07-28T10:45:00.622Z"
+  }
+]

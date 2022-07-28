@@ -1,0 +1,210 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "8649ccb463",
+      "name": "relance_level_1",
+      "next": [
+        {
+          "condition": "true",
+          "node": "procedure_help"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-9gLcDd"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "73c8cd0313",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-WCShzD",
+        "builtin/wait {\"delay\":\"1000\"}",
+        "say #!builtin_text-Yq6Jiu",
+        "builtin/wait {\"delay\":\"3500\"}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "user.scenarioData.alertLevel == 1",
+          "conditionType": "props",
+          "node": "relance_level_1"
+        },
+        {
+          "condition": "user.scenarioData.alertLevel  == 2",
+          "conditionType": "props",
+          "node": "relance_level_2"
+        },
+        {
+          "condition": "user.scenarioData.alertLevel  == 3",
+          "conditionType": "props",
+          "node": "relance_level_3"
+        },
+        {
+          "condition": "user.scenarioData.alertLevel  == 4",
+          "conditionType": "props",
+          "node": "relance_level_4"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "46cd057469",
+      "name": "relance_level_3",
+      "next": [
+        {
+          "condition": "true",
+          "node": "contact_dsi_ticket"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-9gLcDd",
+        "builtin/wait {\"delay\":\"2500\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-044abd",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-044abd",
+      "flow": "skills/choice-044abd.flow.json",
+      "next": [
+        {
+          "caption": "User picked [yes]",
+          "condition": "temp['skill-choice-ret-zvcn5z7qqe'] == \"yes\"",
+          "node": "dsi_redirect"
+        },
+        {
+          "caption": "User picked [no]",
+          "condition": "temp['skill-choice-ret-zvcn5z7qqe'] == \"no\"",
+          "node": "std_thanks_reply"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "conditionType": "always",
+          "node": "error.flow.json"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "ffd28d2cf0",
+      "name": "dsi_redirect",
+      "next": [
+        {
+          "condition": "true",
+          "node": "contact_dsi_ticket"
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"1500\"}",
+        "say #!builtin_text-zPk5Af",
+        "builtin/wait {\"delay\":\"1500\"}",
+        "say #!builtin_text-rJrxZa"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d30094f668",
+      "name": "relance_level_2",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "choice-044abd"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-9gLcDd",
+        "builtin/wait {\"delay\":\"2500\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "be7adf02ec",
+      "name": "relance_level_4",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json#end_demo"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-9gLcDd",
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-njhbh_",
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-F3ZG1q",
+        "builtin/wait {\"delay\":\"2500\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f7db37e795",
+      "name": "std_thanks_reply",
+      "next": [
+        {
+          "condition": "true",
+          "node": "procedure_help"
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"1500\"}",
+        "say #!builtin_text-de3sq3"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "bb16881da9",
+      "name": "contact_dsi_ticket",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json#end_demo"
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-xHgi71",
+        "say #!builtin_text-ph1ZBM",
+        "builtin/wait {\"delay\":\"2500\"}",
+        "say #!builtin_text-P1SicA",
+        "builtin/wait {\"delay\":\"2500\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "216d372d19",
+      "name": "procedure_help",
+      "next": [
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "main.flow.json#end_demo"
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"1500\"}",
+        "say #!builtin_text-SDzABK"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

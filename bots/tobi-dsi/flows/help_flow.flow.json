@@ -36,7 +36,8 @@
       "next": [
         {
           "condition": "true",
-          "node": ""
+          "conditionType": "always",
+          "node": "main.flow.json#end_demo"
         }
       ],
       "onEnter": [

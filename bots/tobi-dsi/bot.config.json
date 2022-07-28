@@ -8,8 +8,8 @@
     "emailAddress": "",
     "termsConditions": "",
     "privacyPolicy": "",
-    "avatarUrl": "/api/v1/bots/tobi-dsi/media/p0kro6cp3oequj83zibh-bot.png",
-    "coverPictureUrl": "/api/v1/bots/tobi-dsi/media/krw7irgu8sqpjvcjen0w-bot-halo.png"
+    "avatarUrl": "/api/v1/bots/tobi-dsi/media/mw9642qkfjn3shwnmdyv-robot.png",
+    "coverPictureUrl": "/api/v1/bots/tobi-dsi/media/qcbiw8hsrf45bh4jw1ph-robot.png"
   },
   "$schema": "../../bot.config.schema.json",
   "description": "",

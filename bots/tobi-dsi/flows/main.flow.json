@@ -29,29 +29,11 @@
       "next": [
         {
           "condition": "true",
-          "node": ""
+          "node": "end_demo"
         }
       ],
       "onEnter": [
         "say #!builtin_text-IXJEx4"
-      ],
-      "onReceive": null,
-      "type": "standard"
-    },
-    {
-      "id": "544727e1ed",
-      "name": "init_webchat_data",
-      "next": [
-        {
-          "condition": "true",
-          "node": "entry_intro"
-        }
-      ],
-      "onEnter": [
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
-        "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
-        "liveit_api {\"url\":\"http://liveit.api/user/conformity-status\",\"key\":\"conformity\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -81,6 +63,48 @@
         "say #!builtin_text-Xpq3HE"
       ],
       "onReceive": []
+    },
+    {
+      "id": "544727e1ed",
+      "name": "init_webchat_data",
+      "next": [
+        {
+          "condition": "session.scenario  === \"relance-safecheck\"",
+          "conditionType": "props",
+          "node": "relance_safecheck.flow.json"
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": "entry_intro"
+        }
+      ],
+      "onEnter": [
+        "liveit_var_init {}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"scenario\",\"value\":\"{{user.webchatCustomId.scenario}}\"}",
+        "liveit_api {\"url\":\"http://liveit.api/user/conformity-status\",\"key\":\"conformity\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d48cab8c12",
+      "name": "end_demo",
+      "next": [
+        {
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "builtin/wait {\"delay\":\"2000\"}",
+        "say #!builtin_text-Kj_OJg"
+      ],
+      "onReceive": null,
+      "type": "standard"
     }
   ]
 }
