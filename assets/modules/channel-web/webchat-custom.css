@@ -1,0 +1,9 @@
+h3 {
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.bpw-chat-bubble-content {
+  border-radius: 20px;
+}
