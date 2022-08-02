@@ -13,13 +13,13 @@
   {
     "id": "builtin_text-Xpq3HE",
     "formData": {
-      "text$fr": "Dites-moi comment je peux vous aider.\nSession Scenario is {{session.scenario}}",
+      "text$fr": "Dites-moi comment je peux vous aider.",
       "markdown$fr": true,
       "typing$fr": true
     },
     "createdBy": "admin",
     "createdOn": "2022-07-20T13:04:22.029Z",
-    "modifiedOn": "2022-07-27T11:15:13.358Z"
+    "modifiedOn": "2022-07-29T07:06:48.744Z"
   },
   {
     "id": "builtin_text-_XaDvz",
@@ -255,13 +255,13 @@
   {
     "id": "builtin_text-P1SicA",
     "formData": {
-      "text$fr": "*Ici Botpress pourrait paramètrer le lien vers la création de ticket afin de pre-remplir les champs (titre, catégorie, observateur(s) etc.*",
+      "text$fr": "*Ici on va paramètrer le lien vers la création de ticket afin de pre-remplir les champs (titre, catégorie, observateur(s) etc.*",
       "markdown$fr": true,
       "typing$fr": true
     },
     "createdBy": "admin",
     "createdOn": "2022-07-28T10:14:03.829Z",
-    "modifiedOn": "2022-07-28T10:14:03.829Z"
+    "modifiedOn": "2022-07-29T05:52:39.094Z"
   },
   {
     "id": "builtin_text-zPk5Af",
@@ -277,13 +277,13 @@
   {
     "id": "builtin_text-rJrxZa",
     "formData": {
-      "text$fr": "*Ici on pourrait imaginer un éventuel handoff vers la module webchat non-bot HITL (Human In The Loop)*",
+      "text$fr": "*Ici on pourrait déclencher le handoff vers la module webchat non-bot HITL (Human In The Loop)*",
       "markdown$fr": true,
       "typing$fr": true
     },
     "createdBy": "admin",
     "createdOn": "2022-07-28T10:36:20.494Z",
-    "modifiedOn": "2022-07-28T10:36:46.336Z"
+    "modifiedOn": "2022-07-29T05:53:51.830Z"
   },
   {
     "id": "builtin_text-Kj_OJg",

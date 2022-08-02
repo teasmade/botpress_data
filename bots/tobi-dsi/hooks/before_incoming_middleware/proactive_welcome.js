@@ -8,7 +8,7 @@ if (event.type === "proactive-trigger") {
   };
   // debugger;
   bp.logger.info(`PROACTIVE: ${JSON.stringify(event)}`);
-  // bp.logger.info(`${JSON.stringify(event.state)}`);
+  bp.logger.info(`${JSON.stringify(user)}`);
   // Don't skip event processing - removes need for user input before flow starts
   event.setFlag(bp.IO.WellKnownFlags.SKIP_DIALOG_ENGINE, false);
 

@@ -2,7 +2,7 @@
   "$schema": "../botpress.config.schema.json",
   "httpServer": {
     "host": "localhost",
-    "restart": "go",
+    "restart": "goa",
     "port": 3000,
     "backlog": 0,
     "bodyLimit": "10mb",

@@ -58,7 +58,6 @@
         "builtin/wait {\"delay\":\"1000\"}",
         "say #!builtin_text-z4C2hI",
         "builtin/wait {\"delay\":\"2500\"}",
-        "say #!builtin_text-ei80mj",
         "builtin/wait {\"delay\":\"2500\"}",
         "say #!builtin_text-Xpq3HE"
       ],
@@ -84,8 +83,7 @@
         "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
         "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
         "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
-        "builtin/setVariable {\"type\":\"session\",\"name\":\"scenario\",\"value\":\"{{user.webchatCustomId.scenario}}\"}",
-        "liveit_api {\"url\":\"http://liveit.api/user/conformity-status\",\"key\":\"conformity\"}"
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"scenario\",\"value\":\"{{user.webchatCustomId.scenario}}\"}"
       ],
       "onReceive": null,
       "type": "standard"
@@ -102,6 +100,57 @@
       "onEnter": [
         "builtin/wait {\"delay\":\"2000\"}",
         "say #!builtin_text-Kj_OJg"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "30734dfeef",
+      "name": "init_webchat_data-backup",
+      "next": [
+        {
+          "condition": "session.scenario  === \"relance-safecheck\"",
+          "conditionType": "props",
+          "node": ""
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "liveit_var_init {}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"scenario\",\"value\":\"{{user.webchatCustomId.scenario}}\"}",
+        "liveit_api {\"url\":\"http://liveit.api/user/conformity-status\",\"key\":\"conformity\"}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "d56f7ed1a1",
+      "name": "init_webchat_data-backup2",
+      "next": [
+        {
+          "condition": "session.scenario  === \"relance-safecheck\"",
+          "conditionType": "props",
+          "node": ""
+        },
+        {
+          "condition": "true",
+          "conditionType": "always",
+          "node": ""
+        }
+      ],
+      "onEnter": [
+        "liveit_var_init {}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"firstName\",\"value\":\"{{user.webchatCustomId.firstName}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"id\",\"value\":\"{{user.webchatCustomId.id}}\"}",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"token\",\"value\":\"{{user.webchatCustomId.token}}\"}",
+        "builtin/setVariable {\"type\":\"session\",\"name\":\"scenario\",\"value\":\"{{user.webchatCustomId.scenario}}\"}"
       ],
       "onReceive": null,
       "type": "standard"

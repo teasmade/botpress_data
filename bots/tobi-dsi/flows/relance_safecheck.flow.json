@@ -99,17 +99,14 @@
     {
       "id": "ffd28d2cf0",
       "name": "dsi_redirect",
-      "next": [
-        {
-          "condition": "true",
-          "node": "contact_dsi_ticket"
-        }
-      ],
+      "next": [],
       "onEnter": [
         "builtin/wait {\"delay\":\"1500\"}",
         "say #!builtin_text-zPk5Af",
         "builtin/wait {\"delay\":\"1500\"}",
-        "say #!builtin_text-rJrxZa"
+        "builtin/removeVariable {\"type\":\"user\",\"name\":\"scenarioData\"}",
+        "builtin/removeVariable {\"type\":\"user\",\"name\":\"webchatCustomId\"}",
+        "hitlnext/handoff {\"scenario\":\"safeCheckRelance2\"}"
       ],
       "onReceive": null,
       "type": "standard"

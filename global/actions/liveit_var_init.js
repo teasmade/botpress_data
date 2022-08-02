@@ -10,6 +10,11 @@ const myAction = async () => {
   Object.entries(data).forEach(
     ([key, value]) => (user.scenarioData[key] = value)
   );
+  bp.logger.info(`VAR-INIT-USER: ${JSON.stringify(user)}`);
+  bp.logger.info(`VAR-INIT-SESSION: ${JSON.stringify(session)}`);
+
+  user.conformity = null;
+  // user.webchatCustomId = null;
 };
 
 return myAction();
