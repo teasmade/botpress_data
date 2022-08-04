@@ -1,10 +1,75 @@
 # 🤖DSI Bot Dev🤖
 
-## Notes on Botpress Setup and Inital Exploration
+## Notes on Botpress Setup and Initial Exploration
 
 July 2022
 Tom Allen
 <thomas@searocco.studio>
+
+[Latest Developer Guide]:botpress-docs.s3-website-us-east-1.amazonaws.com/versions/
+
+[SDK Reference]:botpress.com/reference/
+
+## Build Notes
+
+Install Node 12.18.1 (or switch with e.g. NVM, N)
+Install Yarn
+
+From the directory where you want to host the instance of Botpress :
+
+ - `git clone git@github.com:botpress/botpress.git && cd botpress`
+ - `git reset --hard ff3bd3bddd64e0bac375626ede7cfb4d5b54fa4c` (this is to switch to Botpress v12.28.1)
+ - `yarn cache clean`
+ - `yarn`
+ - `yarn build` (NOTE the build step failed for me when run from GitBash; Windows CMD worked)
+ - `yarn start`
+ 
+ Open the Botpress client, by default served on localhost:3000
+ On first login enter new username / password
+ 
+## Environment Variables
+
+For a full-build install, .env file should be located at `packages/bp/dist`
+
+`PORT=` port Botpress will run the GUI on
+`DATABASE=postgres` use postgres
+`DATABASE_URL=` standard postgres connection string e.g. `postgres://login:password@your-db-host.com:5432/your-db-name`
+`DATABASE_PG_SEARCH_PATH=` to set a schema (prefix) to use within the db
+`DATABASE_POOL={"min":3,"max":10}` e.g. for pooling setup
+`EXTERNAL_URL=` the url Botpress will listen to for connections
+
+## User / Password Management
+
+The first time a user connects to a new Botpress install and connects to the GUI, they will be prompted to create a master account. This is the only time this will happen - the free version does not have the possibility of adding additional admins / multiple users.
+
+To reset and be able to create a new master admin user, connect to the Botpress DB and delete the contents of the table `strategy_default`
+
+To add multiple users without an Enterprise license (HACKY ???) ...
+
+Create the first Super Admin users as normal when first connecting.
+
+Copy their entry in the db table `strategy_default` , changing the email to the new user.
+
+In the file `packages/bp/dist/data/global/botpress.config.json` update the array `superAdmins` e.g.
+
+```
+  "superAdmins": [
+    {
+      "email": "thomas@searocco.studio",
+      "strategy": "default"
+    },
+    {
+      "email": "jonathan@mkdmpartner.com",
+      "strategy": "default"
+    }
+  ],
+```
+ 
+## Clone of Demo Bot
+
+(Need test bot data rar)
+
+Copy contents to `packages/bp/dist/data`
 
 ## Test Webchat Setup
 
@@ -15,7 +80,7 @@ We call its inject script in index.html, then send it some init config.
 ## Webchat init config (index.html)
 
 `host` - the URL of the Botpress server
-`bitId` - the id of the bot to load
+`botId` - the id of the bot to load
 `hideWidget` - hides the Botpress default open / close button
 
 ## Test config in Botpress GUI
