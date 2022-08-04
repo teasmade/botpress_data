@@ -71,6 +71,10 @@ In the file `packages/bp/dist/data/global/botpress.config.json` update the array
 
 Copy contents to `packages/bp/dist/data`
 
+## Custom Modules / Components
+
+The folder `/examples` has both custom component and module template folders with example files and readmes explaining custom module setup.
+
 ## Test Webchat Setup
 
 Botpress by default serves on localhost:3000
