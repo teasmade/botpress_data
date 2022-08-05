@@ -6,15 +6,15 @@ July 2022
 Tom Allen
 <thomas@searocco.studio>
 
-[Latest Developer Guide]:botpress-docs.s3-website-us-east-1.amazonaws.com/versions/
+[Latest Developer Guide](botpress-docs.s3-website-us-east-1.amazonaws.com/versions/)
 
-[SDK Reference]:botpress.com/reference/
+[SDK Reference](botpress.com/reference/)
 
 ## Issues
 
 Build from source currently relies on Node v12 which is now in end-of-life.
 
-[Apparently]:https://github.com/botpress/botpress/issues/4808 an upgrade to use Node v16 is in the pipeline for 2022, but late
+[Apparently](https://github.com/botpress/botpress/issues/4808) an upgrade to use Node v16 is in the pipeline for 2022, but late
 
 ## Build From Source Notes
 
@@ -83,7 +83,7 @@ The folder `/examples` has both custom component and module template folders wit
 
 ## Docker Compose 
 
-[These examples]:https://github.com/botpress/botpress/tree/master/examples/docker-compose of a Docker Compose installation work fine for running a Botpress install, alongside a Postgres instance plus self-hosted language / nlp servers.
+[These examples](https://github.com/botpress/botpress/tree/master/examples/docker-compose) of a Docker Compose installation work fine for running a Botpress install, alongside a Postgres instance plus self-hosted language / nlp servers.
 
 However, a Docker install (can?) leads to local data on the host (e.g. Bot config json and js files) being created by root inside the container volume, so permissions don't allow editing of this data from the host side (i.e. using a full instance of VSCode.
 
