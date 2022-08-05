@@ -10,7 +10,13 @@ Tom Allen
 
 [SDK Reference]:botpress.com/reference/
 
-## Build Notes
+## Issues
+
+Build from source currently relies on Node v12 which is now in end-of-life.
+
+[Apparently]:https://github.com/botpress/botpress/issues/4808 an upgrade to use Node v16 is in the pipeline for 2022, but late
+
+## Build From Source Notes
 
 Install Node 12.18.1 (or switch with e.g. NVM, N)
 Install Yarn
@@ -74,6 +80,12 @@ Copy contents to `packages/bp/dist/data`
 ## Custom Modules / Components
 
 The folder `/examples` has both custom component and module template folders with example files and readmes explaining custom module setup.
+
+## Docker Compose 
+
+[These examples]:https://github.com/botpress/botpress/tree/master/examples/docker-compose of a Docker Compose installation work fine for running a Botpress install, alongside a Postgres instance plus self-hosted language / nlp servers.
+
+However, a Docker install (can?) leads to local data on the host (e.g. Bot config json and js files) being created by root inside the container volume, so permissions don't allow editing of this data from the host side (i.e. using a full instance of VSCode.
 
 ## Test Webchat Setup
 
